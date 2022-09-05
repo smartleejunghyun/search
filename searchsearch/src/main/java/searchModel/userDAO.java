@@ -1,0 +1,37 @@
+package searchModel;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+
+import searchDB.SqlSessionManager;
+
+public class userDAO {
+	private SqlSessionFactory sqlSessionFactory = new SqlSessionManager().getSqlSession();
+	
+	//회원가입
+	public int join(userDTO dto) {
+
+		SqlSession session = sqlSessionFactory.openSession(true);
+		int row = session.insert("join", dto);
+
+		session.close();
+		return row;
+
+	}
+	
+	//로그인
+	public userDTO login(userDTO dto) {
+	      SqlSession session = sqlSessionFactory.openSession(true);
+	      
+	      userDTO info = session.selectOne("login",dto);
+	      
+	      session.close();
+	      return info;
+	   }
+}
+
+	
+
+	
+	
+
