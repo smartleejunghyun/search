@@ -49,7 +49,7 @@
             <div class="bookmark checked">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="checkRow" value="${content.IDX}">
                 <label class="form-check-label" for="flexCheckChecked">
-                  bookmark checked
+                  
                 </label>
               </div>
           <div class="card h-100">
