@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+body{
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(
+      rgba(255, 255, 226, 0.8),
+      rgba(255, 255, 226, 0.8)
+    ), url(https://github.com/yoonseo1004/yoonseo/blob/main/images/shop_back.jpg?raw=true);
+  }
+
+.btn.btn-primary{
+    margin-top: 5px;
+    background-color: #cecece;
+    border: 1px solid #f6f6f6;
+    color: rgb(255, 255, 255);
+  }
+  .btn.btn-primary:hover{
+    background-color: #8f8f8f;
+    border: 1px solid #c8c8c8;
+    color: white;
+  }
+.btn.btn-info{
+    background-color: rgb(226, 226, 226);
+    border: none;
+    box-shadow: 1px 1px 1px rgb(213, 213, 213);
+}
+.btn.btn-info:hover{
+    background-color: #b4b4b4;
+    color: white;
+}
+.card{
+    padding: 4px;
+    height: 100%;
+}
+.card img{
+    border-radius: 10px;
+}
+.btn.btn-info.rebutton{
+    font-size: 20px;
+    margin-top: 50px;
+    color: #080808;
+    background-color: #ada466a9;
+    border: 1px solid rgb(194, 194, 194);
+    box-shadow: 1px 1px 1px rgb(213, 213, 213);
+}
+.btn.btn-info.rebutton:hover{
+    margin-top: 50px;
+    color: #ffffff;
+    background-color: #877d3da9;
+    border: 1px solid rgb(194, 194, 194);
+    box-shadow: 1px 1px 1px rgb(213, 213, 213);
+}
+
+
+

@@ -6,6 +6,8 @@
 	<properties resource="searchDB/db.properties"></properties>
 	<typeAliases>
 		<typeAlias type="searchModel.userDTO" alias="userDTO" />
+		<typeAlias type="searchModel.bookMarkDTO" alias="bookMarkDTO" />
+		<typeAlias type="searchModel.clothDTO" alias="clothDTO" />
 
 	</typeAliases>
 	<environments default="development">
@@ -21,6 +23,7 @@
 	</environments>
 	<mappers>
 		<mapper resource="searchDB/userMapper.xml" />
+		<mapper resource="searchDB/bookMarkMapper.xml" />
 		
 
 	</mappers>

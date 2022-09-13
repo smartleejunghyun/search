@@ -3,17 +3,22 @@ package searchModel;
 import java.sql.Date;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 @RequiredArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class userDTO {
 	
 	public userDTO(String userId, String userPw){
 		this.userId = userId;
 		this.userPw = userPw;
 	}
+
 
     // 회원 아이디 
 	@NonNull

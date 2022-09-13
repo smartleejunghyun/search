@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="searchDB.bookMarkMapper">
+	<insert id="addBookmark" parameterType="bookMarkDTO">
+		insert into t_wishlist values(t_wishlist_seq.nextval, #{userId}, #{clNumber}, sysdate)
+	</insert>
+	<select id="showBookmark" parameterType="String" resultType="clothDTO">
+	select a.cl_seq, a.cl_type, a.cl_site, a.cl_img, a.cl_look from t_clothes a,(select * from t_user a2, t_wishlist b2 where a2.user_id = b2.user_id and a2.user_id = #{userId}) b where a.cl_seq = b.cl_seq
+	</select>
+	<select id="checkBookmark" parameterType="bookMarkDTO" resultType="int">
+	select cl_seq from t_wishlist where user_id = #{userId} and cl_seq = #{clNumber}
+	</select>
+	<delete id="deleteBookmark" parameterType="bookMarkDTO">
+	delete t_wishlist where user_id = #{userId} and cl_seq = #{clNumber}
+	</delete>
+</mapper>
